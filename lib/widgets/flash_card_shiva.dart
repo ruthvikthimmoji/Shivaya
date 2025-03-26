@@ -3,21 +3,21 @@ import 'package:flutter/material.dart';
 
 import '../data/stutras.dart';
 
-class FlashCard extends StatelessWidget {
+class FlashCardShiva extends StatelessWidget {
   final int index;
-  const FlashCard({super.key, required this.index});
+  const FlashCardShiva({super.key, required this.index});
 
   @override
   Widget build(BuildContext context) {
     return FlipCard(
       front: Card(
-        color: Color(0xff4A90E2),
+        color: Colors.transparent,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16),
         ),
         child: Center(
           child: Text(
-            stutras[index]['sutra']!,
+            shivaStutras[index]['sutra']!,
             textAlign: TextAlign.center,
             style: const TextStyle(
               fontSize: 24,
@@ -27,13 +27,13 @@ class FlashCard extends StatelessWidget {
         ),
       ),
       back: Card(
-        color: Color(0xff3F51B5),
+        color: Colors.grey.shade600,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16),
         ),
         child: Center(
           child: Text(
-            stutras[index]['meaning']!,
+            shivaStutras[index]['meaning']!,
             textAlign: TextAlign.center,
             style: const TextStyle(
                 fontSize: 18,

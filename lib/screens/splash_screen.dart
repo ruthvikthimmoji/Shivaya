@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shivaya/screens/home_screen.dart';
+import 'package:shivaya/screens/home_screen_main.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -18,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff7B7B7B),
+      backgroundColor: Colors.transparent,
       body: Center(
         child: Image.asset(
           'assets/images/logo.png',
@@ -34,7 +34,7 @@ class _SplashScreenState extends State<SplashScreen> {
     if (mounted) {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (BuildContext context) => HomeScreen()),
+        MaterialPageRoute(builder: (BuildContext context) => HomeScreenMain()),
       );
     }
   }
